@@ -1,0 +1,348 @@
+1)
+ans--
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int i=0;
+	    Scanner sc = new Scanner(System.in);
+	    int n=sc.nextInt();
+	    for(i=2;i<n;i++){
+	        if(n%i==0){
+	            System.out.println("not prime!!");
+	            break;
+	        } 
+	    }
+	    if(i==n)
+		    System.out.println("prime");
+	}
+}
+
+2)
+
+ans--
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int i=0;
+	    Scanner sc = new Scanner(System.in);
+	    int n=sc.nextInt();
+	    
+	        if(n>0){
+	            System.out.println("positive");
+	        } 
+	        else{
+	             System.out.println("negative");
+	        }
+	    
+	}
+}
+
+3)
+ans--
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int i=1;
+	    Scanner sc = new Scanner(System.in);
+	    int n=sc.nextInt();
+	    
+	       for(int j=1;j<=n;j++){
+	          i *= j;
+	          //System.out.println(n); 
+	       }
+	       
+	       System.out.println(i);
+	    
+	}
+}
+
+4)
+ans--
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int i=0,j=1,l;
+	    Scanner sc = new Scanner(System.in);
+	    int n=sc.nextInt();
+	         System.out.print(i+"+"+j);
+	       for(int k=0;k<n-2;k++){
+	           l=i+j; 
+	           System.out.print("+"+l);
+	           i=j;
+	           j=l;
+	       }
+	       
+	       //System.out.println(i);
+	    
+	}
+}
+
+5)
+ans--
+import java.util.*;
+public class Main
+{
+    
+    public static int fab(int n){
+	    if(n<=1)
+	        return n;
+	   return fab(n-1)+fab(n-2); 
+	   
+	}
+	
+	public static void main(String[] args) {
+	    int i=0,j=1,l;
+	    Scanner sc = new Scanner(System.in);
+	    int n=sc.nextInt();
+	   System.out.print(fab(n));
+	       
+	       //System.out.println(i);
+	    
+	}
+	
+	
+}
+
+6)
+
+import java.util.*;
+public class Main
+{
+	
+	public static void main(String[] args) {
+	    int i=65;
+	    Scanner sc = new Scanner(System.in);
+	   // int n=sc.nextInt();
+	  for(i=65;i<=90;i++){
+	     char ch=(char)i;
+	      System.out.print(ch+" ");
+	  }
+	       
+	       
+	    
+	}
+	
+}
+
+7)
+
+import java.util.*;
+public class Main
+{
+	
+	public static void main(String[] args) {
+	    byte i=65,j=97;
+	    Scanner sc = new Scanner(System.in);
+	    char n=sc.next().charAt(0);
+	    int m=n;
+	  for(i=65;i<=90;i++){
+	     if(m==i)
+	     System.out.println("it's uppercase letter");
+	  }
+	   
+	  for(j=97;i<=122;i++){
+	     if(m==i)
+	     System.out.println("it's lowercase letter");
+	  }     
+	       
+	    
+	}
+	
+}
+
+8)
+
+import java.util.*;
+public class Main
+{
+	
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    char n=sc.next().charAt(0);
+	    if(n=='a' || n=='i' || n=='o' || n=='e' || n=='u' ||n=='A' || n=='I' || n=='O' || n=='E' || n=='U')
+	        System.out.println("it's vowel letter");
+	    else
+	         System.out.println("it's consonant letter");
+	   
+	  //for(j=97;i<=122;i++){
+	     //if(m==i)
+	    // System.out.println("it's lowercase letter");
+	  //}     
+	       
+	    
+	}
+	
+}
+
+9)
+
+import java.util.*;
+import java.lang.*;
+public class Main
+{
+	
+	public static void main(String[] args) {
+	    int n=0,x=0,y=0,z=0;
+	    Scanner sc = new Scanner(System.in);
+	     n=sc.nextInt();
+	     x = n;
+	    while(x>0){
+	    
+	     y = x%10;
+	     z+=(y*y*y);
+	     x = x/10;
+	  }     
+	       
+	   if(z==n)
+	    System.out.println("Armstrong number");
+	   else
+	    System.out.println("No");
+	}
+	
+}
+
+10)
+
+import java.util.*;
+import java.lang.*;
+public class Main
+{
+    
+    
+    public static void re(String s){
+        if(s==null || s.length()<=1)
+            System.out.print(s);
+        else{
+        System.out.print(s.charAt(s.length()-1));
+        re(s.substring(0,s.length()-1));
+        }
+    }
+	
+	public static void main(String[] args) {
+	    int n=0,x=0,y=0,z=0;
+	    Scanner sc = new Scanner(System.in);
+	     String s=sc.next();
+	     re(s);
+	}	    
+	
+}
+
+11)
+
+import java.util.*;
+public class Main{
+
+    public static void decimaltooctal(int n){
+        int []octal = new int[50]; 
+        int i=1;
+        while(n>0){
+            octal[i] = n%8;
+            n = n/8;
+            i++;
+        }
+        for(int j= i-1;j>=0;j--){
+            System.out.print(octal[j]);
+        }
+    }
+
+
+	public static void main(String[] args) {
+	    
+	    Scanner sc = new Scanner(System.in);
+	    int n = sc.nextInt();
+	    decimaltooctal(n);
+		
+	}
+}
+
+12)
+
+import java.util.*;
+public class Main{
+
+    public static void octaltodecimal(int n){
+        int num,decimal = 0; 
+        int i=1,base=1;
+        while(n>0){
+            num = n%10;
+            decimal += num*base;
+            n = n/10;
+            i++;
+            base = base*8;
+        }
+        System.out.print(decimal);
+    }
+
+
+	public static void main(String[] args) {
+	    
+	    Scanner sc = new Scanner(System.in);
+	    int n = sc.nextInt();
+	    octaltodecimal(n);
+		
+	}
+}
+
+13)
+
+import java.util.*;
+public class Main{
+
+    public static void binarytodecimal(int n){
+        int num,decimal = 0; 
+        int i=1,base=1;
+        while(n>0){
+            num = n%10;
+            decimal += num*base;
+            n = n/10;
+            i++;
+            base = base*2;
+        }
+        System.out.print(decimal);
+    }
+
+
+	public static void main(String[] args) {
+	    
+	    Scanner sc = new Scanner(System.in);
+	    int n = sc.nextInt();
+	    binarytodecimal(n);
+		
+	}
+}
+
+14)
+
+import java.util.*;
+public class Main{
+
+    public static void decimaltobinary(int n){
+        int [] binary = new int[50]; 
+        int i=0,base=1;
+        while(n>0){
+            binary[i] = n%2;
+            n = n/2;
+            i++;
+            //base = base*2;
+        }
+        for(int j=i-1;j>=0;j--){
+        System.out.print(binary[j]);
+        }
+    }
+
+
+	public static void main(String[] args) {
+	    
+	    Scanner sc = new Scanner(System.in);
+	    int n = sc.nextInt();
+	    decimaltobinary(n);
+		
+	}
+}
+
